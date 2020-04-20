@@ -1,0 +1,42 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   background-color: #fbc1c1;
+ }
+
+ h1 {
+   background-color:#95260a;
+   color: #fff;
+   height: 50px;
+   line-height: 50px;
+ }
+
+ h2 {
+   margin: 30px 0;
+ }
+
+ .container {
+   width: 90%;
+   margin: auto;
+ }
+
+.hidden-text {
+  display: none;
+}
+
+.hidden-text.visible {
+  display: block;
+}
+
+#fare-container {
+  margin-left: 50px;
+  color: #95260a;
+}
+
+#final-fare {
+  text-decoration: underline;
+}
