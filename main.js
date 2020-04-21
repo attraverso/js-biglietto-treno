@@ -15,17 +15,21 @@ document.getElementById('age-container').setAttribute('class', 'visible');
 var total_fare = total_km * 0.21;
 console.log('total fare:', total_fare);
 
+//define discount rates
+var discount_underage = 20;
+var discount_over65 = 40;
+
 /* trip fare if <18yo -> -20% discount
 else if >65yo -> 40% discount
 else -> standard fare
 -
 fares are rounded to the 2nd decimal */
 if(age < 18) {
-  var fare_underage = total_fare - ((total_fare / 100) * 20);
+  var fare_underage = total_fare - ((total_fare / 100) * discount_underage);
   document.getElementById('final-fare').innerHTML = fare_underage.toFixed(2) + ' &euro;';
   document.getElementById('fare-container').setAttribute('class', 'visible');
 } else if(age >= 65) {
-  var fare_over65 = total_fare - ((total_fare / 100) * 40);
+  var fare_over65 = total_fare - ((total_fare / 100) * discount_over65);
   document.getElementById('final-fare').innerHTML = fare_over65.toFixed(2) + ' &euro;';
   document.getElementById('fare-container').setAttribute('class', 'visible');
 } else {
